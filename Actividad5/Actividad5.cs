@@ -83,23 +83,26 @@ namespace Actividad5
         {
             String palabra = (String)entrada.Replace(" ", String.Empty).ToLower();
 
-            String arbalap = (String)palabra.Reverse();
+            String arbalap = palabra.Reverse().ToString();
 
-            return (palabra.SequenceEqual(arbalap));
+            return palabra.SequenceEqual(arbalap);
 
             throw new NotImplementedException();
         }
 
         public static int contarPalabras(string entrada)
         {
-            //TODO
+            string[] palabras = entrada.Split(" ");
+
+            return palabras.Length - 1;
 
             throw new NotImplementedException();
         }
 
         public static int contarCaracteres(string entrada)
         {
-            
+            String palabra = (String)entrada.Replace(" ", String.Empty);
+            return palabra.Length;
 
             throw new NotImplementedException();
         }
