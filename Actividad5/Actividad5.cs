@@ -26,6 +26,7 @@ namespace Actividad5
         public static string devolverStringOrdenado(string[] vs)
         {
             Array.Sort(vs);
+            return devolverString(vs);
 
             throw new NotImplementedException();
         }
@@ -40,7 +41,7 @@ namespace Actividad5
             {
                 if (cadena[i] == v)
                 {
-                    posicion = v + 1;
+                    posicion = i + 1;
                     salir = true;
                 }
             }
@@ -52,26 +53,41 @@ namespace Actividad5
 
         public static int[] sumarArrays(int[] vs1, int[] vs2)
         {
+            int[] sumados = new int[vs1.Length];
 
-            //TODO
+            for (int i = 0; i < sumados.Length; i++)
+            {
+                sumados[i] = vs1[i] + vs2[i];
+            }
+
+            return sumados;
 
             throw new NotImplementedException();
         }
 
         public static int[] multiplicarArrays(int[] vs1, int[] vs2)
         {
-            //TODO
+            int[] multiplicados = new int[vs1.Length];
+
+            for (int i = 0; i < multiplicados.Length; i++)
+            {
+                multiplicados[i] = vs1[i] * vs2[i];
+            }
+
+            return multiplicados;
 
             throw new NotImplementedException();
         }
 
         public static bool isPalindromo(string entrada)
         {
-            //TODO
+            String palabra = (String)entrada.Replace(" ", String.Empty).ToLower();
+
+            String arbalap = (String)palabra.Reverse();
+
+            return (palabra.SequenceEqual(arbalap));
 
             throw new NotImplementedException();
-
-
         }
 
         public static int contarPalabras(string entrada)
@@ -83,7 +99,7 @@ namespace Actividad5
 
         public static int contarCaracteres(string entrada)
         {
-            //TODO
+            
 
             throw new NotImplementedException();
         }
